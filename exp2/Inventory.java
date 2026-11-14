@@ -34,7 +34,6 @@ public class Inventory {
         List<String[]> arrivals = new ArrayList<>();    // R
         List<String[]> orders = new ArrayList<>();      // O
         List<String[]> deletes = new ArrayList<>();     // D
-
         BufferedReader reader2 = new BufferedReader(new FileReader("Transactions.txt"));
         while ((line = reader2.readLine()) != null) {
             if (line.trim().isEmpty()) continue;
@@ -102,7 +101,6 @@ public class Inventory {
             String itemNumber = parts[2];
             int amount = Integer.parseInt(parts[3]);
             Item target = findItem(items, itemNumber);
-
             // 库存不够或没有该货物，记录到错误列表中
             if (target == null || target.quantity < amount) {
                 errors.add(new String[]{customerNumber, itemNumber, String.valueOf(amount)});
