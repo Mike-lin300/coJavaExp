@@ -1,0 +1,10 @@
+/docs/*
+!docs/实验指导书与报告
+
+
+.vscode/
+bin/
+lib/
+
+
+*.class
